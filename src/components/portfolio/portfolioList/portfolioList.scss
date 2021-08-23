@@ -1,0 +1,15 @@
+@import "../../../global.scss";
+
+li{
+    margin-right: 1.5rem;
+    cursor: pointer;
+    padding: .5rem;
+    @include mobile{
+        margin-right: 20px;
+    }
+    &.active{
+        background-color: $mainColor;
+        color: white;
+        border-radius: 9px;
+    }
+}

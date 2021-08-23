@@ -1,0 +1,85 @@
+@import './../../global.scss';
+
+.testimonials{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    h1{
+        font-size: 50px;
+    }
+
+    .container{
+        width: 90%;
+        display: flex;
+        height: 90%;
+        align-items: center;
+        justify-content: center;
+        @include mobile{
+            flex-direction: column;
+        }
+    }
+
+    .card{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 250px;
+        height: 60%;
+        border-radius: 10px;
+        justify-content: space-around;
+        box-shadow: 0px 0px 15px -8px black;
+        padding: 20px;
+        transition: all .5s ease;
+
+        &:hover{
+            transform: scale(1.1);
+        }
+        &.featured{
+            height: 65%;
+            width: 300px;
+            margin: 0 30px;
+            @include mobile{
+                width: 90%;
+                height: 230px;
+                margin-bottom: 10px;
+            }
+
+        }
+        @include mobile{
+        width: 90%;
+        height: 230px;
+        margin-bottom: 10px;
+        padding: 0 10px;
+        }
+        .top{
+            img{
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                object-fit: cover;
+                @include mobile{
+                    width: 50px;
+                    height: 50px;
+
+                }
+            }
+            
+        }
+        .center{
+            background-color: rgb(250, 235, 238);
+            border-radius: 10px;
+            padding: 10px;
+        }
+        .bottom{
+            text-align: center;
+            h3{
+                font-size: 20px;
+            }
+            h4{
+                font-size:15px;
+                color: gray;
+            }
+        }
+    }
+}

@@ -1,0 +1,119 @@
+@import "./../../global.scss";
+
+
+.intro{
+    display: flex;
+
+    @include mobile{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .left{
+        flex: 0.6;
+        overflow: hidden;
+        justify-content: center;
+        padding-top: 50px;
+        padding-right: 120px;
+
+        .containerImg{
+            background-color:crimson;
+            border-radius: 50%;
+            width: 900px;
+            height: 900px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            float: right;
+            @include mobile{
+                align-items: flex-start;
+            }
+
+            img{
+                width: 90%;
+                @include mobile{
+                    width: 50%;
+                }
+            }
+        }
+    }
+
+
+
+    .right{
+        flex: 0.4;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 60px;
+        position: relative;
+        @include mobile{
+            flex: 0.5;
+            padding-left: 0;
+            align-items: center;
+            margin-top: -40px;
+        }
+.ityped-cursor {
+font-size: 1.3rem;
+opacity: 1;
+animation: blink 0.3s infinite;
+animation-direction: alternate;
+}
+
+@keyframes blink {
+    50%{
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+        h1{
+            font-size: 60px;
+            margin: 10px 0;
+            @include mobile{
+                font-size: 40px;
+            }
+        }
+
+        h2{
+            font-size: 35px;
+        }
+
+        div{
+            font-size: 30px;
+            @include mobile{
+                font-size: 25px;
+            }
+            span{
+                font-size: inherit;
+                color: crimson;
+            }
+
+        }
+
+        a{
+            position: absolute;
+            bottom: 0;
+            color: black;
+            left: 40%;
+            animation: parpadea 2.5s infinite;
+
+            @keyframes parpadea {
+                100%{
+                    opacity: .2;
+                }
+            }
+            .expandMore{
+                font-size: 60px;
+                transition: all 1s ease-in;
+                // &:hover{
+                //     font-size: 70px;
+                // }
+            }
+        }
+
+
+    }
+}
